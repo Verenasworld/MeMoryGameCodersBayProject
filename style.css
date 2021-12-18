@@ -10,7 +10,9 @@ body{
     height: 100vh;
     background: #191919;
     display: flex;
+    z-index: 1;
 }
+
 .memory-game{
     width: 840px;
     height: 640px;

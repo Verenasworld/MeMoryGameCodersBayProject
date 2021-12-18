@@ -5,7 +5,12 @@ let hasFilppedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
 
+let clickCards =1;
+let matchingCards = 0;
+let playtime = new Date()
+
 function flipCard(){
+
     if(lockBoard) return;
     if(this === firstCard)return;
 
@@ -13,6 +18,7 @@ function flipCard(){
     if (!hasFilppedCard){
         //first click
         hasFilppedCard=true;
+
         firstCard = this;
         return;
     }//second click
@@ -50,6 +56,15 @@ function resetBoard(){
     [hasFilppedCard,lockBoard] = [false,false];
     [firstCard,secondCard] =[null,null];
 }
+
+// shuffle cards with random generating order number
+
+(function shuffle(){
+        cards.forEach(card => {
+            let randomPos = Math.floor(Math.random() *12);
+            card.style.order = randomPos;
+        });
+    })();
 
 cards.forEach(card => card.addEventListener('click', flipCard))
 

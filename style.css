@@ -9,10 +9,19 @@
 }
 
 .titelU{
-    margin: 100px;
+    margin: 0  0 50px 0;
     padding: 20px;
     background: rgba(255,255,255,0.5);
 
+}
+
+.gameinfo{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: center;
+    align-items: flex-start;
 }
 h1{
     text-align: center;

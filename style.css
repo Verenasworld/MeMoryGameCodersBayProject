@@ -2,15 +2,48 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: "Calibri Light";
 /*    box sizing - handling how border and padding applied to an element
       - shrinks the content inside and not add throw the element
 */
 }
+
+.titelU{
+    margin: 0  0 50px 0;
+    padding: 20px;
+    background: rgba(255,255,255,0.5);
+
+}
+
+.gameinfo{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: center;
+    align-items: flex-start;
+}
+h1{
+    text-align: center;
+    color: #ecbd4d;
+    font-size: 50px;
+}
+
+p{
+    text-align: center;
+    color: white;
+    font-size: 25px;
+}
 body{
     height: 100vh;
     background: #191919;
-    display: flex;
     z-index: 1;
+}
+section{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+
 }
 
 .memory-game{

@@ -1,9 +1,9 @@
 // flip
 const cards = document.querySelectorAll('.memory-card');
-
 let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
+
 //Anzeige Counter
 let clickCounter = 0;
 let matchCounter = 0;
@@ -87,13 +87,13 @@ function resetBoard() {
     });
 })();
 
-
+//todo: erst starten bei ersten klick -über button... zeit ende bei matching
 function setTime(){
     totalSeconds++;
     seconds.innerHTML = pad(totalSeconds % 60);
     minutes.innerHTML = pad (parseInt(totalSeconds / 60));
 }
-
+// typen umwandlung??? !
 function pad(val) {
     let valString = val + "";
     if (valString.length < 2) {

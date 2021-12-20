@@ -9,9 +9,10 @@ let clickCounter = 0;
 let matchCounter = 0;
 
 //Anzeige Zeit
-// let start = Date.now();
-// let end = Date.now();
-// let time = new Date();
+let minutes = document.getElementById('minutes');
+let seconds = document.getElementById('seconds');
+let  totalSeconds = 0;
+setInterval(setTime, 1000);
 
 
 function flipCard() {
@@ -85,6 +86,22 @@ function resetBoard() {
         card.style.order = randomPos;
     });
 })();
+
+
+function setTime(){
+    totalSeconds++;
+    seconds.innerHTML = pad(totalSeconds % 60);
+    minutes.innerHTML = pad (parseInt(totalSeconds / 60));
+}
+
+function pad(val) {
+    let valString = val + "";
+    if (valString.length < 2) {
+        return "0" + valString;
+    } else {
+        return valString;
+    }
+}
 
 cards.forEach((card) => {
     card.addEventListener('click', flipCard);

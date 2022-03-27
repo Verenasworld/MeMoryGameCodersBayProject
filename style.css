@@ -66,6 +66,8 @@ section{
     margin: 5px;
     transform: scale(1);
     transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    -webkit-perspective: 300px;
     transition: transform .5s;
 }
 /* active means , when i clicked the card - transform */
@@ -78,17 +80,18 @@ section{
     transform: rotateY(180deg);
 }
 
-.font-face,
-.back-face{
+ .font-face, .back-face
+{
     width: 100%;
     height: 100%;
     position: absolute;
     border-radius: 5px;
-    background: #191919;
+    background: #ff0000;
     backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
     background: rgba(255,255,255,0.5);
 }
-font-face{
+.font-face{
     transform: rotateY(180deg);
 }
 

@@ -43,7 +43,6 @@ function checkForMatch() {
     if (matchCounter === 6) {
         // end.getUTCSeconds();
         // time = end - start;
-        console.log("thats great")
         document.getElementById('istfertig').innerHTML = "geschafft";
         // document.getElementById('playingT').innerHTML = time;
         //
